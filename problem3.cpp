@@ -7,12 +7,7 @@ What is the largest prime factor of the number 600851475143 ?
 
 using namespace std;
 
-class Number{
-public:
-  long getPrimeFactor(long);
-};
-
-long Number::getPrimeFactor(long number){
+long getPrimeFactor(long number){
   for(long num = 2; num <= number; num++){
     if(number%num == 0){
       if(number/num == 1){
@@ -25,8 +20,7 @@ long Number::getPrimeFactor(long number){
 }
 
 int main(){
-  Number number;
   
   cout << "Running.." << endl;
-  cout << "Largest prime factor is: " << number.getPrimeFactor(600851475143) <<  endl << endl;
+  cout << "Largest prime factor is: " << getPrimeFactor(600851475143) <<  endl << endl;
 }
